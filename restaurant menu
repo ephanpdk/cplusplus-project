@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    float price =0;
+    char choice;
+    char again;
+
+    cout<<"===Restaurant Menu=="<<endl;
+        cout<<"1. Burger"<<endl;
+        cout<<"2. French Fries"<<endl;
+        cout<<"3. Coke"<<endl;
+        cout<<"4. Nuggies"<<endl;
+        cout<<"5. Mineral Water"<<endl;
+    do{
+        cout<<"Input your oder :"<<endl;
+        cin>>choice;
+        switch(choice){
+            case '1':
+                cout<<"Burger $5.00"<<endl;
+                price+=5.00;
+                break;
+            case '2':
+                cout<<"French Fries $2.50"<<endl;
+                price+=2.50;
+                break;
+            case '3':
+                cout<<"Coke $2.00"<<endl;
+                price+=2.00;
+                break;
+            case '4':
+                cout<<"Nuggies $3.50"<<endl;
+                price+=3.50;
+                break;
+            case '5':
+                cout<<"Mineral Water $1.50"<<endl;
+                price+=1.50;
+                break;
+            default:
+                cout<<"We currently only have 5 Menu, Please Try Again."<<endl;
+        }
+        cout<<"Do you want to Order Again? (y/t)"<<endl;
+        cin>>again;
+    }
+    while(again == 'y');
+     cout<<"Total price : $"<<price;
+    cin.get();
+    return 0;
+}
